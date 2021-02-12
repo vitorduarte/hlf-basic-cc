@@ -12,8 +12,7 @@ RUN go build -o chaincode -v .
 FROM alpine:3.11 as prod
 
 COPY --from=build /go/src/github.com/basic/chaincode /app/chaincode
-
-USER 1000
+RUN chmod a+x /app/chaincode
 
 WORKDIR /app
 CMD ./chaincode
