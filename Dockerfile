@@ -16,4 +16,4 @@ COPY --from=build /go/src/github.com/basic/chaincode /app/chaincode
 USER 1000
 
 WORKDIR /app
-CMD ./hlf-basic-cc
+CMD ./chaincode
